@@ -29,7 +29,7 @@ import com.fresco.ecommerce.repo.ProductRepo;
 import com.fresco.ecommerce.repo.UserRepo;
 
 @SpringBootTest
-@RunWith(SpringRunner.class)
+//@RunWith(SpringRunner.class)
 @TestMethodOrder(OrderAnnotation.class)
 public class ECommerceApplicationTests {
 	@Autowired
