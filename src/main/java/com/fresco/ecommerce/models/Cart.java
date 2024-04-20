@@ -2,13 +2,17 @@ package com.fresco.ecommerce.models;
 
 import java.util.List;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 public class Cart {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer cartId;
 	private Double totalAmount;
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private User user;
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "cart")
 	private List<CartProduct> cartProducts;
 
 	public Cart() {
